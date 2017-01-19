@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^2.5.5",
     "express": "^4.14.0",
+    "request": "^2.79.0",
     "yelp": "^1.0.2"
   }
 }
