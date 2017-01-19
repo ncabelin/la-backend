@@ -1,0 +1,312 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  padding: 0 20px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  background: rgba(255,255,255,0.7);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.lgScreen {
+  display: inline-block;
+}
+
+.smScreen, .info, #url {
+  display: none;
+}
+
+#distance {
+  text-align: center;
+}
+
+.nav {
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+select {
+  display: none;
+  width: 200px;
+  text-overflow: ellipsis;
+}
+
+.btn.options, .options {
+  margin: 10px;
+  display: none;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    transform: translateZ(0px);
+    z-index: 0;
+}
+
+.menu, #place {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.menu {
+  z-index: 100;
+  position: fixed;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+#info {
+  display: none;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #af7e5d;
+  width: 250px;
+  background: white;
+  position: fixed;
+  right: 0;
+  z-index: 999;
+}
+
+.fadein, .fadeout {
+  opacity: 0;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+.fadein {
+  opacity: 1;
+}
+
+.business_img {
+  position: relative;
+  top: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 10px;
+}
+
+#content {
+  font-size: 18px;
+}
+
+#address, #yelp {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#phone {
+  text-align: center;
+}
+
+#yelp {
+ font-size: 12px;
+}
+
+#content small a, #close {
+  text-align: right;
+  cursor: pointer;
+}
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid #af7e5d;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+.hide {
+  display: none;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+h1 {
+  font-family: "Dancing Script", cursive;
+}
+
+form {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+nav ul { list-style: none; text-align: center; }
+nav ul li { display: inline; }
+nav ul li a { text-decoration: none; }
+
+button {
+  border-radius: 5px;
+  margin-left: 5px;
+  transition: ease 0.3s;
+}
+
+.weatherInfo {
+  font-size: 14px;
+  display: none;
+}
+
+.openAttr {
+  font-size: 10px;
+}
+
+.googleAttr {
+  width: 100px;
+}
+
+footer {
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: none;
+}
+
+td,
+input {
+  background-color: white;
+  border: 1px solid #af7e5d;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+td:hover,
+.places:hover {
+  background-color: #e78e56;
+  color: black;
+  text-decoration: none;
+}
+
+thead tr td {
+  background: none;
+  border: none;
+  color: black;
+}
+
+tr td a {
+  background-color: white;
+  color:black;
+  border: none;
+}
+
+tr td a:visited {
+  background-color: white;
+  color:black;
+  border: none;
+}
+
+tr td a:hover {
+  background-color: #e78e56; !important;
+  color:white !important;
+  border: none;
+}
+
+tr td a:focus {
+  outline: none;
+}
+
+tr td a:active {
+  background-color: white;
+  color:black;
+  border: none;
+}
+
+.weatherResult {
+  font-size: 25px;
+}
+
+.infoImg {
+  width: 200px;
+}
+
+.btn:link {
+  color: white;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.btn:visited {
+  color: white;
+}
+
+.btn-success {
+  border-radius: 100%;
+}
+
+.btn-danger {
+  background-color: #b6ced9;
+  border: none;
+}
+
+@media screen and (max-width:768px) {
+  .btn.options, .options {
+    display: inline;
+  }
+
+  #help {
+    display: none;
+  }
+
+  .smScreen {
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .menu {
+    visibility: hidden;
+  }
+  .street {
+    width: 100%;
+  }
+
+  #info {
+    width: 90%;
+    height: 50%;
+    margin-bottom: 10px;
+    overflow-y: auto;
+    visibility: hidden;
+  }
+
+  header {
+    bottom: 10px;
+    width: 80%;
+  }
+}

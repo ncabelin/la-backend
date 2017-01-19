@@ -3,6 +3,7 @@
 var express = require('express'),
 		app = express(),
 		secret = require('./secret_keys'),
+		path = require('path'),
 		Yelp = require('yelp');
 
 var yelp = new Yelp({
@@ -18,6 +19,12 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
+});
+
+app.use(express.static('public'));
+
+app.get('/', function(req, res) {
+	res.sendFile(path.join(__dirname+'/index.html'));
 });
 
 app.get('/:searchterm', function(req, res) {
